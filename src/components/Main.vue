@@ -1,0 +1,61 @@
+<template>
+  <button @click="play">
+    完全にオリジナルな音楽を{{ playOrStop }}
+  </button>
+  <button @click="changeFreq(500)">
+    周波数変更
+  </button>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      ctx: new AudioContext(),
+      isPlaying: false,
+      osc: null,
+      timerId: null
+    }
+  },
+  computed: {
+    playOrStop () {
+      if (this.isPlaying) {
+        return "停止"
+      } else {
+        return "再生"
+      }
+    }
+  },
+  methods: {
+    play () {
+      if (!this.isPlaying) {
+        this.osc = this.ctx.createOscillator();
+        this.osc.connect(this.ctx.destination)
+        this.osc.start(0);
+        this.changeFreqRandomly();
+        this.isPlaying = true;
+      } else {
+        this.osc?.stop();
+        clearTimeout(this.timerId);
+        this.isPlaying = false;
+      }
+    },
+    changeFreq (range) {
+      if (this.isPlaying) {
+        this.osc.frequency.value = Math.random() * range;
+      }
+    },
+    changeFreqRandomly () {
+      const time = Math.random() * 2000;
+      this.timerId = setTimeout(() => {
+        this.changeFreq(500);
+        this.changeFreqRandomly();
+      }, time)
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
