@@ -1,6 +1,11 @@
 <template>
   <div>
     <h1>完全にオリジナルな音楽がここにあります。</h1>
+    <p class="description">
+      世間で知られている音楽はパクリだらけで酷いと思いませんか？ 
+      でも大丈夫！ このサイトでは、<strong>完全にオリジナルな</strong>
+      音楽を、<strong>誰でも無料で</strong>お楽しみいただけます！
+    </p>
     <img src="./assets/musicnote.png" alt="music note" width="200" class="mb-3">
     <Main />
     <a href="https://github.com/UzoGaMuzol/completely-original-song">
@@ -31,5 +36,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0 auto;
 }
 </style>
