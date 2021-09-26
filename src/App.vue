@@ -11,11 +11,13 @@
     <ul class="links">
       <li>
         <a href="https://github.com/UzoGaMuzol/completely-original-song">
+          <i class="bi bi-github"></i>
           Github
         </a>
       </li>
       <li>
         <a href="https://twitter.com/uzogamuzol">
+          <i class="bi bi-twitter"></i>
           Twitter
         </a>
       </li>
