@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>完全にオリジナルな音楽がここにあります。</h1>
+    <img src="./assets/musicnote.png" alt="music note" width="200" class="mb-3">
     <Main />
     <a href="https://github.com/UzoGaMuzol/completely-original-song">
       Github
