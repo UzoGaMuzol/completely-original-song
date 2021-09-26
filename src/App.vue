@@ -2,6 +2,9 @@
   <div>
     <h1>完全にオリジナルな音楽がここにあります。</h1>
     <Main />
+    <a href="https://github.com/UzoGaMuzol/completely-original-song">
+      Github
+    </a>
   </div>
 </template>
 

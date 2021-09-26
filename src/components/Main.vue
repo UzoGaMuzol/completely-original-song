@@ -1,7 +1,9 @@
 <template>
+<div>
   <button class="btn btn-primary" @click="play">
     完全にオリジナルな音楽を{{ playOrStop }}
   </button>
+</div>
 </template>
 
 <script>
