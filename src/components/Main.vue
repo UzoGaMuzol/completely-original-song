@@ -2,12 +2,11 @@
   <button @click="play">
     完全にオリジナルな音楽を{{ playOrStop }}
   </button>
-  <button @click="changeFreq(500)">
-    周波数変更
-  </button>
 </template>
 
 <script>
+import consts from "../../plugins/consts.js"
+
 export default {
   data () {
     return {
@@ -46,9 +45,9 @@ export default {
       }
     },
     changeFreqRandomly () {
-      const time = Math.random() * 2000;
+      const time = Math.random() * consts.maxInterval;
       this.timerId = setTimeout(() => {
-        this.changeFreq(500);
+        this.changeFreq(consts.maxFreq);
         this.changeFreqRandomly();
       }, time)
     }
