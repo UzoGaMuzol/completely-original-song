@@ -1,5 +1,8 @@
 <template>
-  <Main />
+  <div>
+    <h1>完全にオリジナルな音楽がここにあります。</h1>
+    <Main />
+  </div>
 </template>
 
 <script>
