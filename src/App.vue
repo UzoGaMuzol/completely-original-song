@@ -15,6 +15,9 @@ export default {
   name: 'App',
   components: {
     Main
+  },
+  created () {
+    document.title = "完全にオリジナルな音楽が聴けるサイト！！！！！！"
   }
 }
 </script>
