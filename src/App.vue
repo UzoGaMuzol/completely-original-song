@@ -41,5 +41,6 @@ export default {
 .description {
   max-width: 500px;
   margin: 0 auto;
+  text-align: left;
 }
 </style>
