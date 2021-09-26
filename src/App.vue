@@ -8,9 +8,18 @@
     </p>
     <img src="./assets/musicnote.png" alt="music note" width="200" class="mb-3">
     <Main />
-    <a href="https://github.com/UzoGaMuzol/completely-original-song">
-      Github
-    </a>
+    <ul class="links">
+      <li>
+        <a href="https://github.com/UzoGaMuzol/completely-original-song">
+          Github
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/uzogamuzol">
+          Twitter
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -42,5 +51,13 @@ export default {
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
+}
+ul.links {
+  list-style-type: none;
+}
+
+ul.links li {
+  display: inline;
+  margin-right: 1em
 }
 </style>
