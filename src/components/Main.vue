@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div>
+    <div class="mb-3">
       <button class="btn btn-primary" @click="play">
         完全にオリジナルな音楽を{{ playOrStop }}
       </button>
     </div>
-    <div>
-    <select @change="osc.type=$event.target.value">
-      <option
-        v-for="sound in sounds"
-        :value="sound"
-        :key="sound"
-      >
-        {{ sound }}
-      </option>
-    </select>
+    <div class="mb-3">
+      <label for="typeSelector">音色を変更：</label>
+      <select id="typeSelector" @change="osc.type=$event.target.value">
+        <option
+          v-for="sound in sounds"
+          :value="sound"
+          :key="sound"
+        >
+          {{ sound }}
+        </option>
+      </select>
     </div>
   </div>
 </template>
